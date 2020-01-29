@@ -14,31 +14,14 @@ print("Conexión establecida con ", clienteDireccion)
 
 usr = str( conexionSocket.recv(1024), "utf-8" )
 if usr in usrs :
-    print("Usuario ingresado correctamente")
-conexionSocket.send(bytes('Ingrese su contraseña: ', "utf-8"))
-
-
-
-
-
-
+    print("Usuario ingresado correctamente ...")
+    conexionSocket.send(bytes('Ingrese su contraseña: ', "utf-8"))
+#conexionSocket.send(bytes('Ingrese su contraseña: ', "utf-8"))
 
 psw = str( conexionSocket.recv(1024), "utf-8" )
-
-if index(user) == psw(index(user)) :
-    print("Usuario ingresado correctamente")
-
-
-
-
-while 1:
-
-
-
-
-
-
-
+if index(usrs) == pasws(index(usr)):
+    conexionSocket.send(bytes('Contraseña Correcta', "utf-8"))
+    while 1:
 
     print("Mensaje recibido de ", clienteDireccion)
     print('Mensaje Cliente ',mensaje)

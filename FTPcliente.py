@@ -8,13 +8,17 @@ clienteSocket.connect((servidorNombre,servidorPuertoControl))
 
 user = input("Ingrese su usuario: ")
 clienteSocket.send(bytes('USER ' + user, "utf-8"))
+mensajeRespuesta = clienteSocket.recv(1024)
+print(str(mensajeRespuesta, "utf-8"))
 
 pasw = input("Ingrese su password: ")
 clienteSocket.send(bytes(pasw, "utf-8"))
-
 mensajeRespuesta = clienteSocket.recv(1024)
+print(str(mensajeRespuesta, "utf-8"))
 
-print("Respuesta:\n" + str(mensajeRespuesta, "utf-8"))
+
+
+
 
 
 
